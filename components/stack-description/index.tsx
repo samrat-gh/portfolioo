@@ -58,13 +58,13 @@ export default function MyStack() {
     {
       id: "stack-8",
       name: "SQL",
-      icon: <SQLIcon className="inline" width={50} height={50} color="white" />,
+      icon: <SQLIcon className="inline" width={80} height={80} color="white" />,
     },
   ];
   return (
     <div className="space-y-3">
       <div className="font-bold text-2xl text-slate-200">
-        {"Full-Stack Developer"}
+        Full-Stack Developer
       </div>
       <div className="text-lg text-gray-300">
         {
