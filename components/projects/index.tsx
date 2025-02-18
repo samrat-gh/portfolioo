@@ -23,13 +23,7 @@ export default function Projects() {
       name: "Sarathi",
       description:
         "An organization supporting visually impaired students. We built an admin panel along with this landing page as a volunteer project.",
-      techStack: [
-        "Next.js",
-        "Tailwind CSS",
-        "TypeScript",
-        "Express",
-        "MongoDB",
-      ],
+      techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
       href: "https://saarathi-landing.vercel.app/",
       imageSrc: "/sarathi.png",
     },
@@ -71,17 +65,19 @@ export default function Projects() {
               </Link>
               <div className="flex flex-col space-y-4 flex-1">
                 <p className="text-gray-300">{project.description}</p>
-                <div className="flex items-center space-x-2 border-b border-gray-600 pb-2">
-                  <span className="font-semibold text-white">Tech Stack:</span>
-                  <span className="text-gray-300">
+                <div className="pb-5 border-b border-gray-600">
+                  <p className="font-semibold text-white text-left">
+                    Tech Stack:
+                  </p>
+                  <p className="text-gray-300">
                     {project.techStack.join(", ")}
-                  </span>
+                  </p>
                 </div>
                 {project.href && (
                   <Link
                     href={project.href}
                     target="_blank"
-                    className="inline-flex items-center text-cyan-400 hover:underline">
+                    className="inline-flex items-center text-cyan-400 hover:underline text-sm">
                     Visit Project <ExternalLink className="ml-1" size={16} />
                   </Link>
                 )}
