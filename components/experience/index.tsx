@@ -26,9 +26,9 @@ export default function Experiences() {
 
       <div className="relative border-l border-gray-700 ml-4 space-y-8">
         {experience.map((exp) => (
-          <div key={exp.id} className="relative pl-8 pb-8 group">
-            <span className="absolute left-[-8px] top-1 w-4 h-4 bg-cyan-400 rounded-full group-hover:scale-110 transition-transform" />
-            <div className="space-y-5  p-6">
+          <div key={exp.id} className="relative pl-2 sm:pl-8 pb-8 group">
+            <span className="absolute z-0 left-[-8px] top-1 w-4 h-4 bg-cyan-400 rounded-full group-hover:scale-110 transition-transform" />
+            <div className="space-y-5 p-2 sm:p-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <Image
@@ -36,13 +36,15 @@ export default function Experiences() {
                     alt="Cashkr"
                     width={50}
                     height={50}
-                    className="border border-gray-200/50 p-1 rounded-full"
+                    className="size-[35px] sm:size-[50x] border border-gray-200/50 p-1 rounded-full"
                   />
                   <TitleWithLines title={exp.name} className="!text-cyan-400" />
                 </div>
-                <span className="text-gray-400 text-sm">{exp.year}</span>
+                <span className="text-gray-400 text-xs sm:text-sm">
+                  {exp.year}
+                </span>
               </div>
-              <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex flex-col gap-2  md:flex-row sm:gap-6">
                 <Link
                   href={exp.href}
                   target="_blank"

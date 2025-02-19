@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <div className="h-16">
-      <div className="container mx-auto max-w-3xl py-4 px-7 md:px-12 flex justify-between items-center font-semibold pt-8 rounded-md fixed top-0 left-[24%] border-b border-gray-200 backdrop-blur-md">
+      <div className="container z-20 mx-auto w-full sm:max-w-3xl py-4 px-7 md:px-12 flex justify-between items-center font-semibold pt-8 rounded-md fixed top-0 sm:left-[24%] border-b border-gray-200 backdrop-blur-md">
         <Link href="/">
           <Image
             src="/profile.webp"
