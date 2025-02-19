@@ -1,6 +1,7 @@
 import Experiences from "@/components/experience";
 import Navbar from "@/components/nav";
 import Projects from "@/components/projects";
+import SocialFooter from "@/components/social-footer/page";
 import MyStack from "@/components/stack-description";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <MyStack />
         <Projects />
         <Experiences />
+        <SocialFooter />
       </div>
     </div>
   );

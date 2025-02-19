@@ -1,21 +1,19 @@
 import { FC, SVGProps } from "react";
 
-const TwitterIcon: FC<SVGProps<SVGSVGElement>> = ({ ...props }) => (
+const TwitterIcon: FC<SVGProps<SVGSVGElement>> = ({
+  color,
+  className,
+  ...props
+}) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="18"
-    height="18"
-    viewBox="0 0 18 18"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}>
+    viewBox="0 0 128 128"
+    {...props}
+    className={className} // Directly applying className here
+    fill={color ? color : "currentColor"} // Use "currentColor" to allow text color styling
+  >
     <path
-      xmlns="http://www.w3.org/2000/svg"
-      d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"
-    />
+      d="M75.916 54.2 122.542 0h-11.05L71.008 47.06 38.672 0H1.376l48.898 71.164L1.376 128h11.05L55.18 78.303 89.328 128h37.296L75.913 54.2ZM60.782 71.79l-4.955-7.086-39.42-56.386h16.972L65.19 53.824l4.954 7.086 41.353 59.15h-16.97L60.782 71.793Z"
+      strokeWidth=".104373"></path>
   </svg>
 );
 
