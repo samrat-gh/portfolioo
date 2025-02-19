@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Montserrat } from "next/font/google";
 import "@/styles/globals.css";
+import { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,13 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   // variants: ["300", "400", "500", "600", "700", "800", "900"],
 });
+
+export const metadata: Metadata = {
+  title:
+    "Samrat Ghimire | Full Stack Developer | NextJS , TypeScript, Express, MongoDB, React",
+  description:
+    "Experienced Frontend Engineer specializing in Next.js, TypeScript, and UI/UX design. Passionate about building scalable, high-performance web applications. Explore my projects and skills",
+};
 
 export default function RootLayout({
   children,
