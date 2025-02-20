@@ -31,7 +31,7 @@ export default function Projects() {
   ];
 
   return (
-    <section className="space-y-6" id="projects">
+    <section className="space-y-6 pt-28" id="projects">
       <h2 className="text-3xl font-bold text-slate-200">Projects</h2>
       <p className="text-gray-300 text-lg">
         Below are some of the personal projects I&apos;ve worked on, built for

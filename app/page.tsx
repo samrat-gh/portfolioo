@@ -52,7 +52,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <div className="container mx-auto max-w-3xl py-4 px-7 md:px-12 flex flex-col space-y-28 justify-between items-center mt-10">
+      <div className="container mx-auto max-w-3xl py-4 px-7 md:px-12 flex flex-col justify-between items-center mt-10">
         <MyStack />
         <Projects />
         <Experiences />

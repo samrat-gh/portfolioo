@@ -17,7 +17,7 @@ export default function Experiences() {
   ];
 
   return (
-    <section className="space-y-6" id="experience">
+    <section className="space-y-6 pt-28" id="experience">
       <h2 className="text-3xl font-bold text-slate-200">Experience</h2>
       <p className="text-gray-300 text-lg">
         Here is where I have personally worked throughout my 2 years of
