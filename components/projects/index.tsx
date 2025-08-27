@@ -6,6 +6,36 @@ import { TitleWithLines } from "@/ui/title-with-lines";
 export default function Projects() {
   const projects = [
     {
+      id: "project-3",
+      name: "Bhatbhatey",
+      description: "Vehicle Rental Platform  m specially for renting bikes.  ",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+      ],
+      href: "https://bhatbhatey.vercel.app",
+      imageSrc: "/bhatbhatey.png",
+    },
+    {
+      id: "project-4",
+      name: "Public Predicts",
+      description:
+        "A Event Prediction Platform for expression opinions for users",
+      techStack: [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Nest.js",
+        "PostgreSQL",
+        "Prisma",
+      ],
+      href: "https://www.publicpredicts.com/",
+      imageSrc: "/public-predicts.png",
+    },
+    {
       id: "project-1",
       name: "Short It",
       description: "A URL shortening service.",
