@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     "Samrat Ghimire | Full Stack Developer | NextJS , TypeScript, Express, MongoDB, React",
   description:
     "Experienced Frontend Engineer specializing in Next.js, TypeScript, and UI/UX design. Passionate about building scalable, high-performance web applications. Explore my projects and skills",
+  icons: {
+    icon: "/favicon/favicon.ico", // Default icon for browser tabs.
+    shortcut: "/favicon/favicon-16x16.png", // Alternative small PNG favicon for compatibility.
+    apple: "/favicon/apple-touch-icon.png", // Icon used when the site is saved to the home screen on Apple devices.
+  },
 };
 
 export default function RootLayout({
