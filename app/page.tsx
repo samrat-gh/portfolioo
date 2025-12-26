@@ -1,7 +1,8 @@
+import { AnimatedSocialLinks } from "@/components/animated-socials/page";
 import Experiences from "@/components/experience";
 import Navbar from "@/components/nav";
+import OpenSourceContributions from "@/components/open-source-contribution";
 import Projects from "@/components/projects";
-import SocialFooter from "@/components/social-footer/page";
 import MyStack from "@/components/stack-description";
 
 const jsonLd = {
@@ -55,8 +56,9 @@ export default function Home() {
       <div className="container mx-auto max-w-3xl py-4 px-7 md:px-12 flex flex-col justify-between items-center mt-10">
         <MyStack />
         <Projects />
+        <OpenSourceContributions />
         <Experiences />
-        <SocialFooter />
+        <AnimatedSocialLinks />
       </div>
     </div>
   );
