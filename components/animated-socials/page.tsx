@@ -46,7 +46,7 @@ export const AnimatedSocialLinks = () => {
     },
     {
       icon: FileText as IconComponent,
-      href: "/samrat-resume.pdf",
+      href: "/samrat_ghimire_fe.pdf",
       label: "Resume",
       color: "hover:bg-green-700",
     },
@@ -65,8 +65,8 @@ export const AnimatedSocialLinks = () => {
                     <Link
                       href={link.href}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      download={link.label === "Resume" ? "" : undefined}
+                      // rel="noopener noreferrer"
+                      // download={link.label === "Resume" ? "" : undefined}
                       aria-label={link.label}
                       className={`p-2 rounded-full bg-gray-800/50 ${link.color} transition-all duration-300 hover:scale-110 group relative z-20`}>
                       <Icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />

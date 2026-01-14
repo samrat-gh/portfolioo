@@ -12,7 +12,7 @@ export default function Experiences() {
       techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Express", "SQL"],
       href: "https://cashkr.com/",
       imageSrc: "/cashkr.png",
-      year: "June 2023 - Current",
+      year: "June 2023 - Oct 2025",
     },
   ];
 
