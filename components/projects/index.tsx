@@ -1,122 +1,123 @@
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
-import Image from "next/image";
-import { TitleWithLines } from "@/ui/title-with-lines";
+import Link from 'next/link';
+import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Projects() {
-  const projects = [
-    {
-      id: "project-3",
-      name: "Bhatbhatey",
-      description: "Vehicle Rental Platform  m specially for renting bikes.  ",
-      techStack: [
-        "Next.js",
-        "Tailwind CSS",
-        "TypeScript",
-        "Prisma",
-        "PostgreSQL",
-      ],
-      href: "https://bhatbhatey.vercel.app",
-      imageSrc: "/bhatbhatey.png",
-    },
-    {
-      id: "project-4",
-      name: "Public Predicts",
-      description:
-        "A Event Prediction Platform for expression opinions for users",
-      techStack: [
-        "Next.js",
-        "Tailwind CSS",
-        "TypeScript",
-        "Nest.js",
-        "PostgreSQL",
-        "Prisma",
-      ],
-      href: "https://www.publicpredicts.com/",
-      imageSrc: "/public-predicts.png",
-    },
-    {
-      id: "project-1",
-      name: "Short It",
-      description: "A URL shortening service.",
-      techStack: [
-        "Next.js",
-        "Tailwind CSS",
-        "TypeScript",
-        "Express",
-        "MongoDB",
-      ],
-      href: "https://short-it-theta.vercel.app/",
-      imageSrc: "/shortit.png",
-    },
-    {
-      id: "project-2",
-      name: "Sarathi",
-      description:
-        "An organization supporting visually impaired students. We built an admin panel along with this landing page as a volunteer project.",
-      techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
-      href: "https://saarathi-landing.vercel.app/",
-      imageSrc: "/sarathi.png",
-    },
-  ];
+    const projects = [
+        {
+            id: 'project-3',
+            name: 'Bhatbhatey',
+            description: 'Vehicle Rental Platform specifically for renting bikes.',
+            techStack: ['Next.js', 'TypeScript', 'PostgreSQL'],
+            href: 'https://bhatbhatey.vercel.app',
+            imageSrc: '/bhatbhatey.png',
+        },
+        {
+            id: 'project-checklist',
+            name: 'Checklist',
+            description: 'Personal task management app to organize your daily tasks efficiently.',
+            techStack: ['Next.js', 'TypeScript', 'Convex'],
+            href: 'https://checklist-teal-three.vercel.app',
+            imageSrc: '/checklist.png',
+        },
+        {
+            id: 'project-4',
+            name: 'Public Predicts',
+            description: 'An Event Prediction Platform for expressing opinions.',
+            techStack: ['Next.js', 'TypeScript', 'PostgreSQL'],
+            href: 'https://www.publicpredicts.com/',
+            imageSrc: '/public-predicts.png',
+        },
+        {
+            id: 'project-1',
+            name: 'Short It',
+            description: 'A URL shortening service for creating concise links.',
+            techStack: ['Next.js', 'TypeScript', 'MongoDB'],
+            href: 'https://short-it-theta.vercel.app/',
+            imageSrc: '/shortit.png',
+        },
+        {
+            id: 'project-2',
+            name: 'Sarathi',
+            description:
+                'An organization supporting visually impaired students with an admin panel and landing page.',
+            techStack: ['Next.js', 'TypeScript', 'Tailwind'],
+            href: 'https://saarathi-landing.vercel.app/',
+            imageSrc: '/sarathi.png',
+        },
+    ];
 
-  return (
-    <section className="space-y-6 pt-28" id="projects">
-      <h2 className="text-3xl font-bold text-slate-200">Projects</h2>
-      <p className="text-gray-300 text-lg">
-        Below are some of the personal projects I&apos;ve worked on, built for
-        fun and learning. These projects showcase my passion for technology and
-        skill-building. For professional projects, please refer to the &nbsp;
-        <Link href="#experience" className="text-blue-400 hover:underline">
-          Experience section
-        </Link>
-        .
-      </p>
-
-      <div className="space-y-8">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="space-y-4 bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-            <TitleWithLines title={project.name} className="!text-cyan-400" />
-            <div className="flex flex-col md:flex-row gap-6">
-              <Link
-                href={project.href}
-                target="_blank"
-                className="block md:w-1/2 hover:opacity-80 transition-all">
-                <div className="border border-gray-600 rounded-md overflow-hidden">
-                  <Image
-                    src={project.imageSrc}
-                    alt={project.name}
-                    width={500}
-                    height={250}
-                    className="object-cover w-full h-auto"
-                  />
-                </div>
-              </Link>
-              <div className="flex flex-col space-y-4 flex-1">
-                <p className="text-gray-300">{project.description}</p>
-                <div className="pb-5 border-b border-gray-600">
-                  <p className="font-semibold text-white text-left">
-                    Tech Stack:
-                  </p>
-                  <p className="text-gray-300">
-                    {project.techStack.join(", ")}
-                  </p>
-                </div>
-                {project.href && (
-                  <Link
-                    href={project.href}
-                    target="_blank"
-                    className="inline-flex items-center text-cyan-400 hover:underline text-sm">
-                    Visit Project <ExternalLink className="ml-1" size={16} />
-                  </Link>
-                )}
-              </div>
+    return (
+        <section className="py-20" id="projects">
+            <div className="mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
+                    Projects
+                </h2>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+
+            <div className="space-y-6">
+                {projects.map((project) => (
+                    <article
+                        key={project.id}
+                        className="group flex flex-col md:flex-row gap-6 bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-primary"
+                    >
+                        <Link
+                            href={project.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block w-full md:w-72 aspect-video flex-shrink-0 overflow-hidden rounded-xl border border-white/10 focus-visible:ring-2 focus-visible:ring-primary"
+                            aria-label={`Visit ${project.name}`}
+                        >
+                            <Image
+                                src={project.imageSrc || '/placeholder.svg'}
+                                alt={`${project.name} screenshot`}
+                                width={600}
+                                height={338}
+                                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </Link>
+
+                        {/* Content */}
+                        <div className="flex flex-col flex-1 p-6 justify-between">
+                            <div>
+                                <h3 className="text-2xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                                    {project.name}
+                                </h3>
+                                <p className="text-muted-foreground leading-relaxed mb-4">
+                                    {project.description}
+                                </p>
+
+                                {/* Tech Stack */}
+                                <div className="flex flex-wrap gap-2">
+                                    {project.techStack.map((tech) => (
+                                        <span
+                                            key={tech}
+                                            className="px-2.5 py-1 bg-primary/10 text-primary text-xs font-medium rounded border border-primary/20 hover:bg-primary/20 transition-colors"
+                                        >
+                                            {tech}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Link */}
+                            <Link
+                                href={project.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center w-fit text-primary font-medium hover:text-primary/80 focus-visible:ring-2 focus-visible:ring-primary rounded px-1 -mx-1 transition-colors group/link mt-4"
+                            >
+                                Visit
+                                <ExternalLink
+                                    size={14}
+                                    className="ml-1.5 transition-transform group-hover/link:translate-x-0.5"
+                                    aria-hidden="true"
+                                />
+                            </Link>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </section>
+    );
 }

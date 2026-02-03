@@ -3,46 +3,31 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <div className="h-16">
-      <div className="container z-20 mx-auto w-full sm:max-w-3xl py-4 px-7 md:px-12 flex justify-between items-center font-semibold pt-8 rounded-md fixed top-0 sm:left-[24%] border-b border-gray-200 backdrop-blur-md">
-        <Link href="/">
+    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <nav className="flex items-center justify-between w-full max-w-2xl rounded-full border border-white/10 bg-surface/80 px-4 py-2 backdrop-blur-md shadow-2xl shadow-black/20">
+        <Link href="/" className="shrink-0">
           <Image
             src="/profile.webp"
             alt="logo"
-            width={50}
-            height={50}
-            className="rounded-full"
+            width={40}
+            height={40}
+            className="rounded-full ring-2 ring-white/10 transition-transform hover:scale-110"
           />
         </Link>
-        <Link
-          href="#projects"
-          className="hover:text-cyan-400 py-2 px-2 hover:rounded-md">
-          Projects
-        </Link>
-        <Link
-          href="#experience"
-          className="hover:text-cyan-400 py-2 px-2 hover:rounded-md">
-          Experience
-        </Link>
-        {/* <Link
-        href="/"
-        target="_blank"
-        className="hover:text-cyan-400 py-2 px-2 hover:rounded-md hover:bg-blue-900">
-        <Github className="inline" />
-        </Link>
-        <Link
-        href="/"
-        target="_blank"
-        className="hover:text-cyan-400 py-2 px-2 hover:rounded-md hover:bg-blue-900">
-        <Linkedin className="inline" />
-        </Link>
-        <Link
-        href="/"
-        target="_blank"
-        className="hover:text-cyan-400 py-2 px-2 hover:rounded-md hover:bg-blue-900">
-        <Twitter className="inline" />
-        </Link> */}
-      </div>
+        
+        <div className="flex items-center gap-1 sm:gap-4">
+          <Link
+            href="#projects"
+            className="text-sm font-medium text-muted hover:text-primary transition-colors px-3 py-2 rounded-full hover:bg-white/5">
+            Projects
+          </Link>
+          <Link
+            href="#experience"
+            className="text-sm font-medium text-muted hover:text-primary transition-colors px-3 py-2 rounded-full hover:bg-white/5">
+            Experience
+          </Link>
+        </div>
+      </nav>
     </div>
   );
 };

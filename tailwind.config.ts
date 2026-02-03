@@ -19,15 +19,19 @@ export default {
     },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "#ffffff",
+        background: "#020617", // slate-950
+        surface: "#0f172a", // slate-900
+        primary: "#38bdf8", // sky-400
+        secondary: "#818cf8", // indigo-400
+        foreground: "#f8fafc", // slate-50
+        muted: "#94a3b8", // slate-400
+        border: "#1e293b", // slate-800
       },
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "sans"],
       },
       backgroundImage: {
-        primary:
-          "linear-gradient(135deg, #0a192f 0%, #10172a 50%, #0b1e3f 100%)",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
       },
       screens: {
         xs: "100px", // => @media (min-width: 100px) { ... }

@@ -2,8 +2,8 @@ import { AnimatedSocialLinks } from "@/components/animated-socials/page";
 import Experiences from "@/components/experience";
 import Navbar from "@/components/nav";
 import OpenSourceContributions from "@/components/open-source-contribution";
+import PersonalSummary from "@/components/personal-summary";
 import Projects from "@/components/projects";
-import MyStack from "@/components/stack-description";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -47,14 +47,14 @@ const jsonLd = {
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="my-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
       <div className="container mx-auto max-w-3xl py-4 px-7 md:px-12 flex flex-col justify-between items-center mt-10">
-        <MyStack />
+        <PersonalSummary />
         <Projects />
         <OpenSourceContributions />
         <Experiences />

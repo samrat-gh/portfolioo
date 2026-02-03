@@ -17,68 +17,73 @@ export default function Experiences() {
   ];
 
   return (
-    <section className="space-y-6 pt-28" id="experience">
-      <h2 className="text-3xl font-bold text-slate-200">Experience</h2>
-      <p className="text-gray-300 text-lg">
-        Here is where I have personally worked throughout my 2 years of
-        professional experience.
-      </p>
+    <section className="space-y-6 pt-32" id="experience">
+      <div className="space-y-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground">Experience</h2>
+        <p className="text-muted text-lg leading-relaxed max-w-2xl">
+          Here is where I have personally worked throughout my 2 years of
+          professional experience.
+        </p>
+      </div>
 
-      <div className="relative border-l border-gray-700 ml-4 space-y-8">
+      <div className="relative border-l border-white/10 ml-4 space-y-12 py-4">
         {experience.map((exp) => (
-          <div key={exp.id} className="relative pl-2 sm:pl-8 pb-8 group">
-            <span className="absolute z-0 left-[-8px] top-1 w-4 h-4 bg-cyan-400 rounded-full group-hover:scale-110 transition-transform" />
-            <div className="space-y-5 p-2 sm:p-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <Image
-                    src="/ck-logo.png"
-                    alt="Cashkr"
-                    width={50}
-                    height={50}
-                    className="size-[35px] sm:size-[50x] border border-gray-200/50 p-1 rounded-full"
-                  />
-                  <TitleWithLines title={exp.name} className="!text-cyan-400" />
+          <div key={exp.id} className="relative pl-8 pb-4 group">
+            {/* Timeline dot */}
+            <span className="absolute z-10 left-[-9px] top-6 w-5 h-5 bg-background border-4 border-primary rounded-full group-hover:scale-125 transition-transform duration-300 shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+            
+            <div className="space-y-6 p-6 rounded-2xl bg-surface/30 border border-white/5 hover:bg-surface/50 hover:border-white/10 transition-all duration-300">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/5 pb-4">
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
+                    <Image
+                      src="/ck-logo.png"
+                      alt="Cashkr"
+                      width={48}
+                      height={48}
+                      className="size-12 border border-white/10 p-1 rounded-full relative z-10 bg-surface object-contain"
+                    />
+                  </div>
+                   <TitleWithLines title={exp.name} className="!text-primary font-bold text-xl md:text-2xl" />
                 </div>
-                <span className="text-gray-400 text-xs sm:text-sm">
+                <span className="text-muted text-sm font-medium bg-white/5 px-3 py-1 rounded-full border border-white/5">
                   {exp.year}
                 </span>
               </div>
-              <div className="flex flex-col gap-2  md:flex-row sm:gap-6">
+              
+              <div className="flex flex-col gap-6 md:flex-row">
                 <Link
                   href={exp.href}
                   target="_blank"
-                  className="block md:w-1/2 hover:opacity-80 transition-all">
-                  <div className="border border-gray-600 rounded-md overflow-hidden">
+                  className="block md:w-5/12 group-inner">
+                  <div className="border border-white/10 rounded-xl overflow-hidden shadow-lg transition-transform group-hover/inner:translate-y-[-2px]">
                     <Image
                       src={exp.imageSrc}
                       alt={exp.name}
                       width={500}
                       height={250}
-                      className="object-cover w-full h-auto"
+                      className="object-cover w-full h-full"
                     />
                   </div>
                 </Link>
-                <div className="flex flex-col space-y-4 items-center justify-center flex-1">
-                  <p className="text-gray-300 text-sm tracking-wide h-full">
+                
+                <div className="flex flex-col gap-6 flex-1">
+                  <p className="text-muted leading-relaxed">
                     {exp.description}
                   </p>
-
-                  {/* {exp.href && (
-                    <Link
-                      href={exp.href}
-                      target="_blank"
-                      className="inline-flex items-center text-cyan-400 hover:underline">
-                      Visit Project <ExternalLink className="ml-1" size={16} />
-                    </Link>
-                  )} */}
+                  
+                  <div className="mt-auto">
+                    <p className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wider">Tech Stack</p>
+                    <div className="flex flex-wrap gap-2">
+                       {exp.techStack.map((tech) => (
+                          <span key={tech} className="px-3 py-1 bg-white/5 rounded-full text-xs font-medium text-blue-200 border border-white/5">
+                            {tech}
+                          </span>
+                        ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center space-x-2 border-b border-gray-600 pb-2 mt-7 pt-7">
-                <span className="font-semibold text-white">Tech Stack:</span>
-                <span className="text-gray-300">
-                  {exp.techStack.join(", ")}
-                </span>
               </div>
             </div>
           </div>

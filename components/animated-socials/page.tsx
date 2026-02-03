@@ -11,8 +11,6 @@ import {
 import Link from "next/link";
 
 export const AnimatedSocialLinks = () => {
-  // const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   type IconComponent = React.ComponentType<{ className?: string }>;
   const links: {
     icon: IconComponent;
