@@ -1,52 +1,10 @@
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MoveRight } from 'lucide-react';
 import Image from 'next/image';
+import { projects } from '@/data/projects';
 
 export default function Projects() {
-    const projects = [
-        {
-            id: 'project-3',
-            name: 'Bhatbhatey',
-            description: 'Vehicle Rental Platform specifically for renting bikes.',
-            techStack: ['Next.js', 'TypeScript', 'PostgreSQL'],
-            href: 'https://bhatbhatey.vercel.app',
-            imageSrc: '/bhatbhatey.png',
-        },
-        {
-            id: 'project-checklist',
-            name: 'Checklist',
-            description: 'Personal task management app to organize your daily tasks efficiently.',
-            techStack: ['Next.js', 'TypeScript', 'Convex'],
-            href: 'https://checklist-teal-three.vercel.app',
-            imageSrc: '/checklist.png',
-        },
-        {
-            id: 'project-4',
-            name: 'Public Predicts',
-            description: 'An Event Prediction Platform for expressing opinions.',
-            techStack: ['Next.js', 'TypeScript', 'PostgreSQL'],
-            href: 'https://www.publicpredicts.com/',
-            imageSrc: '/public-predicts.png',
-        },
-        {
-            id: 'project-1',
-            name: 'Short It',
-            description: 'A URL shortening service for creating concise links.',
-            techStack: ['Next.js', 'TypeScript', 'MongoDB'],
-            href: 'https://short-it-theta.vercel.app/',
-            imageSrc: '/shortit.png',
-        },
-        {
-            id: 'project-2',
-            name: 'Sarathi',
-            description:
-                'An organization supporting visually impaired students with an admin panel and landing page.',
-            techStack: ['Next.js', 'TypeScript', 'Tailwind'],
-            href: 'https://saarathi-landing.vercel.app/',
-            imageSrc: '/sarathi.png',
-        },
-    ];
-
+    const featuredProjects = projects.filter((project) => project.isFeatured);
     return (
         <section className="py-20" id="projects">
             <div className="mb-6">
@@ -56,7 +14,7 @@ export default function Projects() {
             </div>
 
             <div className="space-y-6">
-                {projects.map((project) => (
+                {featuredProjects.map((project) => (
                     <article
                         key={project.id}
                         className="group flex flex-col md:flex-row gap-6 bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-primary"
@@ -117,6 +75,11 @@ export default function Projects() {
                         </div>
                     </article>
                 ))}
+            </div>
+            <div className="text-center my-2 hover:cursor-pointer">
+                <Link href="/projects" className="text-cyan-500 text-sm hover:underline">
+                    View All Projects <MoveRight className="inline ml-1" />
+                </Link>
             </div>
         </section>
     );
